@@ -77,10 +77,42 @@
 }
 
 @media only screen and (min-width: 1050px) {
+  .main-home {
+    display: flex;
+    justify-content: space-evenly;
+  }
   .list-style {
     padding-top: 30px;
+    display: flex;
     color: #212529;
     font-family: "Nunito", sans-serif;
     font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .list-style-title {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 0;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .list-style-btn {
+    background-color: #e9ecef;
+    transition-duration: 0.4s;
+    color: #868e96;
+    border: 1.4px solid #e9ecef;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 40px;
+    width: 69px;
+    margin-right: 10px;
+  }
+
+  .bt1 {
+    border: 1.4px solid #fd377e;
+    background-color: #fd377e;
+    color: white;
   }
 }

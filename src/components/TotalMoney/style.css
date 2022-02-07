@@ -33,7 +33,7 @@
   .total-section {
     display: flex;
     background-color: #e34981;
-    width: 80%;
+    width: 84%;
     height: 68px;
     justify-content: space-around;
     font-family: "Nunito", sans-serif;
@@ -49,10 +49,20 @@
 }
 
 @media only screen and (min-width: 1050px) {
+  .main-home {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .form-total {
+    min-width: 34.6%;
+    margin-top: 20px;
+  }
+
   .total-section {
     display: flex;
     background-color: #e34981;
-    width: 42%;
+    width: 100%;
     height: 68px;
     justify-content: space-around;
     font-family: "Nunito", sans-serif;
@@ -61,9 +71,9 @@
   }
 
   .total-container {
-    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
   }
 }
