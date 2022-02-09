@@ -53,6 +53,7 @@
 }
 
 .intro-btn {
+  margin: 20px auto;
   background-color: #fd377e;
   border: 2px solid #fd377e;
   border-radius: 8px;
@@ -106,6 +107,17 @@
     display: flex;
     justify-content: center;
   }
+  .intro-btn {
+    margin: -90px auto;
+    background-color: #fd377e;
+    border: 2px solid #fd377e;
+    border-radius: 8px;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
@@ -148,12 +160,20 @@
   }
   .intro-btn {
     background-color: #fd377e;
+    margin: -90px auto;
     border: 2px solid #fd377e;
     border-radius: 8px;
     color: white;
     width: 180px;
+    position: relative;
     height: 40px;
     font-size: 15px;
     font-weight: 600;
+    top: -200px;
+    left: 5px;
+  }
+
+  .intro-style {
+    position: relative;
   }
 }

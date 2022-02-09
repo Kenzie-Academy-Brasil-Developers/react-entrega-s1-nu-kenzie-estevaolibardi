@@ -15,14 +15,13 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 88px;
 }
 
 .figure-style {
-  margin-right: 17%;
-  margin-left: -1.5em;
+  margin-right: 40%;
 }
 
 .img-KenzieLogo {
@@ -38,6 +37,13 @@ body {
   background-color: var(--Color-2);
   border: 1.4px solid var(--Color-2);
   color: var(--Color-3);
+  position: absolute;
+  top: 3%;
+  left: 70%;
+}
+
+.container-pg {
+  position: relative;
 }
 
 @media only screen and (min-width: 750px) {
@@ -47,7 +53,19 @@ body {
   }
 
   .figure-style {
-    margin-right: 35%;
+    margin-right: 65%;
+  }
+
+  .btn-header {
+    height: 40px;
+    width: 64px;
+    border-radius: 8px;
+    background-color: var(--Color-2);
+    border: 1.4px solid var(--Color-2);
+    color: var(--Color-3);
+    position: absolute;
+    top: 3%;
+    left: 80%;
   }
 }
 
@@ -66,17 +84,28 @@ body {
 
   .header-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
   }
 
   .figure-style {
-    margin-right: 80vh;
+    margin-right: 80%;
     margin-left: 0;
   }
   .img-KenzieLogo {
     height: 19.53px;
     width: 122.68px;
     margin-left: 0;
+  }
+  .btn-header {
+    height: 40px;
+    width: 64px;
+    border-radius: 8px;
+    background-color: var(--Color-2);
+    border: 1.4px solid var(--Color-2);
+    color: var(--Color-3);
+    position: absolute;
+    top: 3%;
+    left: 90%;
   }
 }

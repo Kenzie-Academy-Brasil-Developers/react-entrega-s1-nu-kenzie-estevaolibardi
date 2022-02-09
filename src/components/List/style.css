@@ -8,12 +8,13 @@
 .list-style-title {
   display: flex;
   justify-content: center;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   font-size: 16.5px;
 }
 
 .list-style-buttons {
   display: flex;
+  margin-bottom: 20px;
   justify-content: center;
 }
 .list-style-btn.bt3 {
@@ -89,6 +90,7 @@
     font-size: 16px;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
   }
 
   .list-style-title {
@@ -114,5 +116,12 @@
     border: 1.4px solid #fd377e;
     background-color: #fd377e;
     color: white;
+  }
+
+  .list-container {
+    display: flex;
+    width: 560px;
+    margin-bottom: 10px;
+    justify-content: space-between;
   }
 }
