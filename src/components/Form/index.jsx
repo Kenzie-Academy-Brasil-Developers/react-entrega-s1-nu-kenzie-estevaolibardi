@@ -10,8 +10,8 @@ export const Form = ({
 }) => {
   const [input, setInput] = useState({
     description: "",
-    type: "",
-    value: "",
+    type: "Entrada",
+    value: "0",
   });
 
   return (
@@ -41,11 +41,11 @@ export const Form = ({
             <span className="insert-span">Valor</span>
             <input
               className="input-insert-section"
-              // value={input.value}
+              value={input.value}
               type="number"
-              placeholder=""
+              placeholder="0"
               onChange={(event) =>
-                setInput({ ...input, value: Number(event.target.value) })
+                setInput({ ...input, value: event.target.value })
               }
             />
           </div>
@@ -58,8 +58,8 @@ export const Form = ({
                 setInput({ ...input, type: event.target.value })
               }
             >
-              <option value="tomato">Entrada</option>
-              <option value="tomato">Despesa</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Despesa">Despesa</option>
             </select>
           </div>
         </div>

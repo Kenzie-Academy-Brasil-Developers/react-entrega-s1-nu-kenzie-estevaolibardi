@@ -2,15 +2,16 @@ import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export const TotalMoney = ({ listTransactions, totalValue, setTotalValue }) => {
-  const total = listTransactions.reduce(
-    (previousValue, currentValue) => previousValue + currentValue.value,
-    0
-  );
-
-  useEffect(() => {
-    setTotalValue(total);
-  }, [listTransactions]);
+export const TotalMoney = ({ listTransactions }) => {
+  const total = () => {
+    return listTransactions.reduce(
+      (totalValue, currentValue) =>
+        currentValue.type === "Despesa"
+          ? totalValue - currentValue.value
+          : totalValue + currentValue.value,
+      0
+    );
+  };
 
   return (
     <div className="total-container">
@@ -18,7 +19,7 @@ export const TotalMoney = ({ listTransactions, totalValue, setTotalValue }) => {
         <span className="total-section-value">Valor Total:</span>
         <p className="total-section-price">
           <span>$</span>
-          {totalValue}
+          {total()}
         </p>
       </section>
     </div>

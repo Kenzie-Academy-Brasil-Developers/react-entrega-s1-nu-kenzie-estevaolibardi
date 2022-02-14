@@ -8,10 +8,13 @@ import nuKenzieLogo from "./components/Intropg/imgs/Nu Kenzie.png";
 import IntroLogo from "./components/Intropg/imgs/Group 277.svg";
 import "./components/Intropg/style.css";
 import { Card } from "./components/Card";
+
 function App() {
   const [listTransactions, setListTransactions] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [totalValue, setTotalValue] = useState(0);
+
+  // console.log(listTransactions);
 
   const Login = () => {
     setIsLoggedIn(true);
@@ -21,14 +24,17 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  const total = listTransactions.reduce(
-    (previousValue, currentValue) => previousValue + currentValue.value,
-    0
-  );
-
   const addFunction = (input) => {
+    typeof input.value != "NUMBER"
+      ? (input.value = parseInt(input.value))
+      : (input.value = input.value);
     setListTransactions([...listTransactions, input]);
-    // setTotalValue(total);
+  };
+
+  const delFunction = (index) => {
+    setListTransactions(
+      listTransactions.filter((item, indexN) => indexN !== index)
+    );
   };
 
   return (
@@ -49,12 +55,13 @@ function App() {
               <TotalMoney
                 listTransactions={listTransactions}
                 totalValue={totalValue}
-                total={total}
-                setTotalValue={setTotalValue}
               />
             </div>
             <div className="list">
-              <List listTransactions={listTransactions} />
+              <List
+                delFunction={delFunction}
+                listTransactions={listTransactions}
+              />
             </div>
           </div>
         </div>

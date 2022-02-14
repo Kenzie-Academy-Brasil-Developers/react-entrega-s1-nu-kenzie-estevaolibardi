@@ -2,7 +2,7 @@ import "./style.css";
 import { useState } from "react";
 import { Card } from "../Card";
 
-export const List = ({ listTransactions }) => {
+export const List = ({ listTransactions, delFunction }) => {
   return (
     <div className="list-style">
       <div className="list-container">
@@ -13,9 +13,16 @@ export const List = ({ listTransactions }) => {
           <button className="list-style-btn bt3">Despesas</button>
         </div>
       </div>
-      {listTransactions.map((transaction, index) => (
-        <Card transaction={transaction} key={index} />
-      ))}
+      {listTransactions.map((transaction, index) => {
+        return (
+          <Card
+            transaction={transaction}
+            delFunction={delFunction}
+            prop={index}
+            key={index}
+          />
+        );
+      })}
     </div>
   );
 };
