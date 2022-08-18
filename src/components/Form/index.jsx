@@ -1,7 +1,6 @@
 import './reset.css';
 import './style.css';
 import { useState } from 'react';
-import moneylog from './imgs/R$.png';
 import { v4 as uuidv4 } from 'uuid';
 
 export const Form = ({

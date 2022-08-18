@@ -5,7 +5,7 @@ export const TotalMoney = ({ listTransactions }) => {
   const total = () => {
     return listTransactions.reduce(
       (totalValue, currentValue) =>
-        currentValue.type === 'Saída'
+        currentValue.type === 'saída'
           ? totalValue - currentValue.value
           : totalValue + currentValue.value,
       0
