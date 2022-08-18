@@ -1,18 +1,29 @@
-import "./reset.css";
-import "./style.css";
-import { useState } from "react";
-import moneylog from "./imgs/R$.png";
+import './reset.css';
+import './style.css';
+import { useState } from 'react';
+import moneylog from './imgs/R$.png';
+import { v4 as uuidv4 } from 'uuid';
 
 export const Form = ({
   listTransactions,
   setListTransactions,
-  addFunction,
+  setFilterTransactions,
+  filterTransactions,
 }) => {
-  const [input, setInput] = useState({
-    description: "",
-    type: "Entrada",
-    value: "0",
-  });
+  const [type, setType] = useState('');
+  const [description, setDescription] = useState('');
+  const [value, setValue] = useState('');
+
+  function addForm(newForm) {
+    setFilterTransactions([...filterTransactions, newForm]);
+    setListTransactions([...listTransactions, newForm]);
+    reset();
+  }
+  function reset() {
+    setType('');
+    setDescription('');
+    setValue('');
+  }
 
   return (
     <div className="form-style">
@@ -23,12 +34,10 @@ export const Form = ({
         <div className="input-section-style">
           <input
             className="input-section"
-            value={input.description}
+            value={description}
             type="text"
             placeholder="Digite aqui sua descrição"
-            onChange={(event) =>
-              setInput({ ...input, description: event.target.value })
-            }
+            onChange={(event) => setDescription(event.target.value)}
           />
         </div>
         <div className="description-span-ex-style">
@@ -41,31 +50,42 @@ export const Form = ({
             <span className="insert-span">Valor</span>
             <input
               className="input-insert-section"
-              value={input.value}
+              value={value}
               type="number"
               placeholder="0"
-              onChange={(event) =>
-                setInput({ ...input, value: event.target.value })
-              }
+              onChange={(event) => setValue(Number(event.target.value))}
             />
           </div>
           <div className="type-section">
             <span className="insert-span-type">Tipo de valor</span>
             <select
               className="input-insert-type-section"
-              value={input.type}
-              onChange={(event) =>
-                setInput({ ...input, type: event.target.value })
-              }
+              value={type}
+              onChange={(event) => {
+                setType(event.target.value);
+              }}
             >
+              <option value="" defaultValue disabled hidden>
+                Choose here
+              </option>
               <option value="Entrada">Entrada</option>
-              <option value="Despesa">Despesa</option>
+              <option value="Saída">Despesa</option>
             </select>
           </div>
         </div>
       </div>
       <div className="form-btn-position">
-        <button onClick={() => addFunction(input)} className="form-btn">
+        <button
+          onClick={() =>
+            addForm({
+              id: uuidv4(),
+              description,
+              type,
+              value: type === 'Saída' ? value * -1 : value,
+            })
+          }
+          className="form-btn"
+        >
           Inserir Valor
         </button>
       </div>

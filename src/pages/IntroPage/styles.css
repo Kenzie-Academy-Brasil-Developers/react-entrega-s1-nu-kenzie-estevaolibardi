@@ -1,0 +1,105 @@
+.intro-style {
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 48px;
+  color: #ffffff;
+  height: 100%;
+}
+
+.wrapper {
+  background-color: #212529;
+  height: 100vh;
+}
+
+.sub-wrapper {
+  height: 100%;
+}
+
+.text-intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro-title {
+  width: 244px;
+  margin-top: 30px;
+  height: 100px;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.intro-span {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  width: 260px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.intro-figure-style {
+  width: 122.68px;
+  height: 19.53px;
+}
+
+.img-KenzieLogo2 {
+  width: 100%;
+}
+
+.intro-btn {
+  width: 241px;
+  height: 48px;
+  background-color: #fd377e;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.intro-figure-style2 {
+  width: 593px;
+  height: 593px;
+}
+
+.intro-figure-style {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-main-img {
+  display: none;
+  align-items: center;
+}
+
+@media only screen and (min-width: 750px) {
+  .wrapper-main-img {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-title {
+    width: 347px;
+    margin-top: 30px;
+    height: 90px;
+    font-size: 38px;
+  }
+}

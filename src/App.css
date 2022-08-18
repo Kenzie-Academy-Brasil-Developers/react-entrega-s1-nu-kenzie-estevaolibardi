@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+body {
+  font-family: var(--Fonts-Inter);
+  font-size: 12px;
+  background-color: #282c34;
+  height: 100vh;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +21,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +28,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.btn-header {
+  cursor: pointer;
+}
+
+.intro-btn {
+  cursor: pointer;
 }
 
 .App-link {

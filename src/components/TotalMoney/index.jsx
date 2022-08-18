@@ -1,12 +1,11 @@
-import "./style.css";
-import { useState } from "react";
-import { useEffect } from "react";
+import './style.css';
+import toReal from '../../Helper';
 
 export const TotalMoney = ({ listTransactions }) => {
   const total = () => {
     return listTransactions.reduce(
       (totalValue, currentValue) =>
-        currentValue.type === "Despesa"
+        currentValue.type === 'Saída'
           ? totalValue - currentValue.value
           : totalValue + currentValue.value,
       0
@@ -16,11 +15,12 @@ export const TotalMoney = ({ listTransactions }) => {
   return (
     <div className="total-container">
       <section className="total-section">
-        <span className="total-section-value">Valor Total:</span>
-        <p className="total-section-price">
-          <span>$</span>
-          {total()}
-        </p>
+        <div className="total-section-wrapper">
+          <span className="total-section-value">Valor Total:</span>
+          <p className="total-section-price">{toReal(total())}</p>
+        </div>
+
+        <p className="info">O valor se refere ao saldo</p>
       </section>
     </div>
   );

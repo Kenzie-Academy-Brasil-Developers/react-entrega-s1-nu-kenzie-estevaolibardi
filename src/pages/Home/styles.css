@@ -1,0 +1,149 @@
+.container-pg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-style {
+  width: 100%;
+}
+
+.formTotal {
+  margin-bottom: 50px;
+}
+
+.mainHome {
+  width: 340px;
+}
+
+.filterTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.mainTitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.RightBoxList {
+  text-align: center;
+}
+
+.leftDiv {
+  margin-left: 20px;
+}
+
+.rightDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.value {
+  margin-right: 38px;
+}
+
+.description {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.divBoxRight {
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 750px) {
+  .mainHome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .emptyList {
+    width: 562px;
+    height: 331px;
+    background-color: #f8f9fa;
+    height: 87.35px;
+    margin-bottom: 33.65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px 0px 0px 4px;
+    border-left: 4px solid #e9ecef;
+  }
+
+  .emptyList1 {
+    background-color: #e9ecef;
+    width: 330.18px;
+    height: 13.19px;
+    margin-top: 24.72px;
+    margin-bottom: 13.19px;
+    margin-left: 10px;
+  }
+
+  .emptyList2 {
+    background-color: #e9ecef;
+    width: 76.27px;
+    height: 13.19px;
+    margin-left: 10px;
+  }
+
+  .filterTitle {
+    height: 40px;
+    width: 562px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .listaBoxRight {
+    text-align: start;
+  }
+
+  .Title {
+    margin: 27px 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    color: #343a40;
+  }
+
+  .mainTitle {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+  }
+
+  .rightBox {
+    margin-top: 40px;
+  }
+
+  .formTotal {
+    width: 363px;
+    margin-right: 58px;
+    margin-top: 20px;
+  }
+
+  .divEsquerda {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .divDireita {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+}

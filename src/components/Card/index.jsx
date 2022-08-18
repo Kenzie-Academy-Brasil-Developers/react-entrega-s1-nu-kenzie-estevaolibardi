@@ -1,47 +1,28 @@
-import "./style.css";
-import { useState } from "react";
-import trash from "./imgs/trash.png";
+import './style.css';
+import toReal from '../../Helper';
+import { useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
-export const Card = ({ transaction, delFunction, prop }) => {
+export const Card = ({ transaction, deleteCard, id }) => {
   return (
     <>
-      {transaction.type === "Entrada" ? (
-        <div className="card-container-entrada">
-          <div className="card-container-sub">
-            <h3 className="card-title">{transaction.description}</h3>
-            <p className="card-price">
-              <span>R$</span>
-              {transaction.value < 0
-                ? transaction.value * -1
-                : transaction.value}
-            </p>
-            <button className="card-bttn" onClick={() => delFunction(prop)}>
-              <img className="card-bttn-img" src={trash}></img>
-            </button>
+      <div className="cardList">
+        <div
+          className={transaction.type === 'Entrada' ? 'greenEntry' : 'grayExit'}
+        ></div>
+        <div className="leftDiv">
+          <div className="description">
+            <b>{transaction.description}</b>
           </div>
-          <div className="card-p-container">
-            <span className="card-span">{transaction.type}</span>
-          </div>
+          <div className="type">{transaction.type}</div>
         </div>
-      ) : (
-        <div className="card-container">
-          <div className="card-container-sub">
-            <h3 className="card-title">{transaction.description}</h3>
-            <p className="card-price">
-              <span>R$</span>
-              {transaction.value < 0
-                ? transaction.value * -1
-                : transaction.value}
-            </p>
-            <button className="card-bttn" onClick={() => delFunction(prop)}>
-              <img className="card-bttn-img" src={trash}></img>
-            </button>
-          </div>
-          <div className="card-p-container">
-            <span className="card-span">{transaction.type}</span>
-          </div>
+        <div className="rightDiv">
+          <div className="value">{toReal(transaction.value)}</div>
+          <button className="trashBtn" onClick={() => deleteCard(id)}>
+            <FaTrash />
+          </button>
         </div>
-      )}
+      </div>
     </>
   );
 };

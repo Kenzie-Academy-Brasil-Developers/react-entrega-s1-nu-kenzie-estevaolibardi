@@ -1,7 +1,7 @@
 .list-style {
   padding-top: 30px;
   color: #212529;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
 }
 
@@ -50,43 +50,11 @@
 }
 
 @media only screen and (min-width: 750px) {
-  .list-style-title {
-    font-size: 22.5px;
-    padding-bottom: 30px;
-  }
-
-  .list-style-btn {
-    background-color: #868e96;
-    transition-duration: 0.4s;
-    color: white;
-    border: 1.4px solid #e9ecef;
-    box-sizing: border-box;
-    border-radius: 8px;
-    height: 40px;
-    width: 100px;
-    margin-right: 10px;
-  }
-
-  .bt1 {
-    border: 1.4px solid #fd377e;
-    background-color: #fd377e;
-  }
-
-  .list-style {
-    padding-top: 40px;
-  }
-}
-
-@media only screen and (min-width: 1050px) {
-  .main-home {
-    display: flex;
-    justify-content: space-evenly;
-  }
   .list-style {
     padding-top: 30px;
     display: flex;
     color: #212529;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +65,7 @@
     font-size: 16px;
     font-weight: 700;
     padding-bottom: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
 
   .list-style-btn {

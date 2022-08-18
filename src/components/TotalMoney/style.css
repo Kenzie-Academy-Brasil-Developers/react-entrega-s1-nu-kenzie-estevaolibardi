@@ -1,11 +1,14 @@
 .total-section {
   display: flex;
-  background-color: #e34981;
+  background-color: #ffffff;
   height: 68px;
   justify-content: center;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
+  flex-direction: column;
+  align-items: center;
   color: white;
   font-size: 16px;
+  border: 1px solid #e9ecef;
 }
 
 .total-section-value {
@@ -16,12 +19,37 @@
 .total-section-price {
   display: flex;
   align-items: center;
-  margin-left: 30%;
+  color: #e34981;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
 }
 
-.total-container {
-  width: 95%;
-  margin: auto;
+.total-section-value {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+
+.total-section-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.info {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #343a40;
+  width: 250px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -32,48 +60,37 @@
 
   .total-section {
     display: flex;
-    background-color: #e34981;
-    width: 84%;
-    height: 68px;
-    justify-content: space-around;
-    font-family: "Nunito", sans-serif;
+    background-color: #ffffff;
+    width: 363px;
+    height: 96px;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    flex-direction: column;
+    align-items: center;
     color: white;
     font-size: 16px;
+    border: 1px solid #e9ecef;
   }
 
   .total-section-value {
     display: flex;
     align-items: center;
     margin-left: 0;
+    margin-right: 90px;
   }
-}
 
-@media only screen and (min-width: 1050px) {
-  .main-home {
+  .total-section-wrapper {
     display: flex;
-    justify-content: space-evenly;
   }
 
-  .form-total {
-    min-width: 34.6%;
-    margin-top: 20px;
-  }
-
-  .total-section {
-    display: flex;
-    background-color: #e34981;
-    width: 100%;
-    height: 68px;
-    justify-content: space-around;
-    font-family: "Nunito", sans-serif;
-    color: white;
-    font-size: 16px;
-  }
-
-  .total-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+  .info {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #343a40;
+    width: 266px;
+    margin-right: 43px;
   }
 }
