@@ -58,7 +58,7 @@
   width: 241px;
   height: 48px;
   background-color: #fd377e;
-  border: 2px solid #fd377e;
+  border: none;
   border-radius: 8px;
   font-family: 'Inter';
   font-style: normal;
@@ -66,6 +66,10 @@
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
+}
+
+.intro-btn:hover {
+  background-color: #fb176a;
 }
 
 .intro-figure-style2 {
